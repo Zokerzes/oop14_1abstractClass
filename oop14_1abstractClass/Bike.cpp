@@ -1,6 +1,10 @@
 #include "Bike.h"
 
-Bike::Bike(string, int, int, int, int) 
+Bike::Bike()
+{
+}
+
+Bike::Bike(string nameType, int price, int track, float speed, float priceKm) :vehicle(nameType, price, track, speed, priceKm)
 {
 	this->nameType = nameType;
 	this->price = price;
@@ -11,12 +15,12 @@ Bike::Bike(string, int, int, int, int)
 
 void Bike::timeTrack()
 {
-	int time_ = track / speed;
+	float time_ = track / speed;
 	cout << "BIKE: time to track " << time_ << endl;
 }
 
 void Bike::priceTrack()
 {
-	int price_ = priceKm * track;
+	float price_ = priceKm * track;
 	cout << "BIKE: price to track " << price_ << endl;
 }

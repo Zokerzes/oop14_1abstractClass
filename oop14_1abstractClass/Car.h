@@ -6,7 +6,9 @@ using namespace std;
 class Car :
     public vehicle
 {
-    Car(string, int, int, int, int);
+public:
+    Car() {};
+    Car(string, int, int, float,float);
     virtual void timeTrack();
     virtual void priceTrack();
 };

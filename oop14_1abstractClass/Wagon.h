@@ -5,7 +5,9 @@
 class Wagon :
     public vehicle
 {
-    Wagon(string, int, int, int, int);
+public:
+    Wagon();
+    Wagon(string, int, int, float, float);
     virtual void timeTrack();
     virtual void priceTrack();
 };

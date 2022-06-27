@@ -1,7 +1,7 @@
 #include "Car.h"
 #include "vehicle.h"
 using namespace std;
-Car::Car(string nameType, int price, int track, int speed, int priceKm):vehicle(nameType,price,track,speed,priceKm)
+Car::Car(string nameType, int price, int track, float speed, float priceKm):vehicle(nameType,price,track,speed,priceKm)
 {
 	this->nameType = nameType;
 	this->price = price;
@@ -11,12 +11,12 @@ Car::Car(string nameType, int price, int track, int speed, int priceKm):vehicle(
 };
 void Car::timeTrack()
 {
-	int time_ = track / speed;
+	float time_ = track / speed;
 	cout << "CAR: time to track " << time_<< endl;
 }
 
 void Car::priceTrack()
 {
-	int price_ = priceKm * track;
+	float price_ = priceKm * track;
 	cout << "CAR: price to track " << price_ << endl;
 }
